@@ -11,6 +11,7 @@ ARG BUILD_AUTH_URL
 ARG BUILD_API_URL
 
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+COPY vendor ./vendor
 RUN pnpm install --frozen-lockfile
 
 COPY . .
